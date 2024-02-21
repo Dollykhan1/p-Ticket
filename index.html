@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Ticket Assinment Five</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    
+    <style>
+        .font-poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-poppins">
+  
+    <section id="P-Ticket">
+      <div class="topbar">
+        <div class="webside-title">
+           <h1 class="webside-name">P-Ticket</h1>
+        </div>
+        <div class="manubar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Destination</li>
+                <li>Search</li>
+            </ul>
+        </div>
+        <div class="bus-icon">
+            <div class="button">
+                bus
+                <img src="images/bus-icon.png" alt="">
+            </div>
+        </div>
+      </div>
+    </section>
+    <header class="header">
+              <section class="score flex justify">
+                <h2 class="basis-20 menu text-base menu-horizontal px-9">End-To-End Travel With</h2>
+                <h2 class="px-9 text-color-green">P-Paribahan</h2>
+                <h3 class="text-base px-4">Absolutely, you have the power to execute tests and assess outcomes right within the app.<br>
+                    Our integrated capabilities ensure a seamless process.</h3><br><br>
+                    <button onclick= "gototicket()" class="btn bg-green px-6 mt-10">Buy Ticket</button>
+</section>
+    </header>
+ <div class="flex-style margin-x-10">
+    <div class="flex-33">
+        <div class="border rounded-border padding-x-10 margin-x-10 text-center">
+            <img class="left-ime" src="images/people.png" alt="">
+            <h1>500+</h1>
+            <p>registered users</p>
+        </div>
+    </div>
+    <div class="flex-33">
+        <div class="border rounded-border padding-x-10 margin-x-10 text-center">
+            <img class="left-ime" src="images/ticket-cupon.png" alt="">
+            <h1>1.7lacks</h1>
+            <p>Tickets Sold</p>
+        </div>
+    </div>
+    <div class="flex-33">
+        <div class="border rounded-border padding-x-10 margin-x-10 text-center">
+            <img class="left-ime" src="images/stoppage.png" alt="">
+            <h1>80k+</h1>
+            <p>Rental Partners</p>
+        </div>
+    </div> 
+ </div>
+ <section class="best-ofer padding-x-10">
+    <h1 class="text-center">Best offer for you</h1>
+    <div class="good-price flex-style padding-x-10">
+        <div class="flex-left-15-off bg-yellow padding-x-10 margin-x-10 rounded-border-20">
+            <div class="flex-style ">
+                <div class="off-price-left">
+                    <h3>15% OFF</h3>
+                    <p>on your next parchese</p>
+                    <p>used by februry 2024</p>
+                </div>
+                <div class =off-price-right>
+                    <p>NEW15</p>
+                    <p>Coupon Code</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-right-20-off padding-x-10 margin-x-10 rounded-border-20 bg-maganda">
+            <div class="flex-style">
+                <div class="off-price-left">
+                    <h3>20% OFF</h3>
+                    <p>on your next parchese</p>
+                    <p>used by februry 2024</p>
+                </div>
+                <div class =off-price-right>
+                    <h3>Couple 20</h3>
+                    <p>Coupon Code</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="offer text-center text-color-green">
+        <span class="btn">see all offer</span>
+    </div>
+ </section>
+      
+
+<div class="perces-ticket">
+    <h1 class="text-center">P.H Paribahan</h1>
+    <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated
+        testing features allow for a streamlined .</p>
+    <div class="perces-ticket-flex">
+        <div class="perces-ticket-left">
+            <div class="gp-top">
+                <div class="gp-top-left">
+                    <img src="images/bus-logo.png" alt="" style="float:left">
+                    <span class="h1">Greenline Paribahan</span>
+                </div>
+                <div class="gp-top-right">
+                    <div class="green-btn">
+                        <img src="images/seat-green.png" alt="" style="float:left">
+                        40 Seats left
+                    </div>
+                </div>
+            </div>
+            <div class="gp-body">
+                <div class="gp-body-line">
+                    <div class="gp-body-left">
+                        Route
+                    </div>
+                    <div class="gp-body-right">
+                        Dhaka - Sylhet
+                    </div>
+                </div>
+                <div class="gp-body-line">
+                    <div class="gp-body-left">
+                        Departure Time
+                    </div>
+                    <div class="gp-body-right">
+                        9:00 PM
+                    </div>
+                </div>
+                <div class="gp-bottom">
+                    <span class="gp-btn">Boarding Point - Laxmipur</span>
+                    <span class="gp-btn">Dropping Point - Bogura</span>
+                    <span class="gp-btn">Est. Time - 11 Hour</span>
+                </div>
+            </div>
+        </div>
+        <div class="perces-ticket-right">
+            <div class="perces-ticket-body">
+                <img src="images/fare.png" alt=""><br>
+                <p class="h1 p-0 m-0">550TK</p>
+                <p class="h1 p-0 m-0">Per Seat</p>
+            </div>
+        </div>
+    </div>
+</div>
+         
+
+
+    <section class="select-seat">
+        <div class="select-seat-left">
+            <h3>Select you seat</h3>
+            <div class="topbar">
+                <div class="abl-left">
+                    <img src="/images/seat-gray.png" alt="">
+                    <span>Abailable</span>
+                </div>
+                <div class="select-right">
+                    <img src="/images/seat-green-filled.png" alt="">
+                    <span>Selected</span>
+                </div>
+            </div>
+            <div class="m-y-20 text-right">
+                <span class="driver">driver</span>
+            </div>
+
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>A</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p id="A1" class="seat-disigin" onclick="changsetcolor()">A1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">A2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">A3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">A4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>B</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">B1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">B2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p id="b3" onclick="SelectSetB3()" class="seat-disigin">B3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">B4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>C</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">C1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">C2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">C3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">C4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>D</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p id="d1" onclick="SelectSetD1()" class="seat-disigin">D1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">D2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">D3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">D4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>E</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">E1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">E2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">E3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">E4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>F</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">F1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">F2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">F3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">F4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>G</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">G1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">G2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">G3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">G4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>H</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">H1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">H2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">H3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">H4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>I</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">I1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">I2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">I3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">I4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-number">
+                <div class="seat-number-left">
+                    <div class="column-left-con">
+                        <div class="column-left-con-1">
+                            <p>J</p>
+                        </div>
+                        <div class="column-left-con-2">
+                            <p class="seat-disigin">J1</p>
+                        </div>
+                        <div class="column-left-con-3">
+                            <p class="seat-disigin">J2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-number-right">
+                    <div class="colum-right-con">
+                        <div class="column-right-con-1">
+                            <p class="seat-disigin">J3</p>
+                        </div>
+                        <div class="column-right-con-2">
+                            <p class="seat-disigin">J4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+        <div class="select-seat-right">
+            <h3>Select you seat</h3>
+            <div class="seat-price-con">
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p>Seat</p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p>class</p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p>Price</p>
+                    </div>
+                </div>
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p id="select-seat-number"></p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p>Economoy</p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p id="price1">1500</p>
+                    </div>
+                </div>
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p id="select-seat-number2"></p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p>Economoy</p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p id="price2">1500</p>
+                    </div>
+                </div>
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p id="select-seat-number3"></p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p>Economoy</p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p id="price3">1500</p>
+                    </div>
+                </div>
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p>Total price</p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p></p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p id="total_price"></p>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <input class="from" type="text" placeholder="have any coupon">
+
+                    <button class="btn-bg-green">Apply</button>
+
+                </div>
+                <div class="seat-price">
+                    <div class="seat-price-left">
+                        <p>Grand Total</p>
+                    </div>
+                    <div class="seat-price-center">
+                        <p></p>
+                    </div>
+                    <div class="seat-price-right">
+                        <p id="grand_total"></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="passenger-container">
+            <label for="">Passenger-Name*</label><br>
+            <input class="from" type="text" placeholder="Enter your Name"><br>
+            <label for="">Phone Number*</label><br>
+            <input class="from" type="text" placeholder="Enter your Phone Number"><br>
+            <label for="">Email ID</label><br>
+            <input class="from" type="text" placeholder="Enter your Email id"><br>
+            <button class="button-big" id="success_next" onclick="submit_to_sucess()">Next</button>
+            <p>Terme and Conditions <span>Concellation Policy</span></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="success-bar" id="success-bar">
+        <img src="images/success.png" alt="" class="">
+        <h1 class="">Success</h1>
+        <h5>Thank you for Booking Our Bus Seats.
+            We are working hard to find the best service and deals for you.
+        </h5>
+        <h6 class="">Shortly you will find a confirmation in your email.</h6>
+    </div>
+    <p class="copy-right-bar">Dolly Khan</p>
+
+    <script src="index.js"></script>  
+</body>
+</html>
