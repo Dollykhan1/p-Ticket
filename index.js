@@ -1,73 +1,157 @@
+function clickButton(){
+    const ticketCounter = document.getElementById('ticket-buy-counter');
+    ticketCounter.scrollIntoView({behavior: 'smooth'});
+}
+const allSit = document.querySelectorAll('.sit');
 
-// console.log conncted("")
+let clickButtonAdd = []
 
-// let countLoss = 40;
-// for(const btn of allBtn){
-// count = count + 1;
-// btn.addEventListener('clck',function(){
-//     count=count + 1;
-//     decument.getElementById('set-count').innerText = count 
-//     countLoss = countLoss - 1;
-//     document.getElementById('seat-los').innerText = countLoss;
-//     const price =document.getElementById('price').innerText
-//     //console.log(pricess)
-//     const btnName = document.guerySelector(btn).innerText
-//     //console.log(btnName)
-//     const titleContainer = document.getElementById('container')
-//     console.log(titleContainer)
-//     const p =document.createElement('p')
-//     p.innerText = btnName.innerText + 'employee' + price
-//     titleContainer.appendChild('p')
+for(const sits of allSit){
+
+    const sit = sits.innerText;
+    const sitName = ["A1","A2","A3","A4","B1","B2","B3","B4","C1","C2","C3","C4","D1","D2","D3","D4","E1","E2","E3","E4","F1","F2","F3","F4","G1","G2","G3","G4","H1","H2","H3","H4","I1","I2","I3","I4","J1","J2","J3","J4",];
+
+    for (const singlesit of sitName) {
+        if(singlesit == sit){
+            
+            sits.addEventListener('click', function(){
+
+                clickButtonAdd.push(sits);
+                
+                if(clickButtonAdd.length <= 4){
+                    sits.setAttribute('disabled', true);
+                
+                    sits.classList.add('bg-[green]');
+                    sits.classList.add('text-white');
+                    
+                    const selectSeat = document.createElement('td');
+                    selectSeat.innerText = sit;
+                    selectSeat.classList.add('text-base')
+                    selectSeat.classList.add('text-[rgba(3,7,18,0.6)]')
+
+                    const economoy = document.createElement('td')
+                    economoy.innerText = 'Economoy'; 
+                    economoy.classList.add('text-base')
+                    economoy.classList.add('text-[rgba(3,7,18,0.6)]')
+
+                    const seatPrice = document.createElement('td');
+                    seatPrice.innerText = 550;
+                    seatPrice.classList.add('text-base')
+                    seatPrice.classList.add('text-[rgba(3,7,18,0.6)]')
+
+                    const createTr = document.createElement('tr');
+                    createTr.classList.add('border-0');
+                    createTr.appendChild(selectSeat);
+                    createTr.appendChild(economoy);
+                    createTr.appendChild(seatPrice);
+
+                    const tableBody = document.getElementById('table-body');
+                    tableBody.appendChild(createTr);
+
+                    const totalPrice = document.getElementById('total-price');
+                    const totalPriceNum = parseInt(totalPrice.innerText);
+                    const price = totalPriceNum + 550;
+                    totalPrice.innerText = price;
+
+                    const grandTotal = document.getElementById('grand-total');
+                    const grandTotalNum = parseInt(grandTotal.innerText);
+                    const grandPrice = grandTotalNum + 550;
+                    grandTotal.innerText = grandPrice;
+
+
+                    const seatCountNumber = document.getElementById('seat-count-number');
+                    const seatStringToNumber = parseInt(seatCountNumber.innerText);
+                    const seatResult = seatStringToNumber + 1;
+                    seatCountNumber.innerText = seatResult;
+
+                    const seatDecriment = document.getElementById('seat-decriment');
+                    const seatDecrimentStringToNum = parseInt(seatDecriment.innerText);
+                    const seatDecrimentResult = seatDecrimentStringToNum - 1;
+                    seatDecriment.innerText = seatDecrimentResult;
+
+                    const phoneNumber = document.getElementById('phone-number');
+                    phoneNumber.removeAttribute('disabled');
+                }
+                else{
+                    alert('There are no more seats available for you !! Thank you !!')
+                }
+
+                if(clickButtonAdd.length == 4){
+
+                    const discound = document.getElementById('discound');
+                    discound.removeAttribute('disabled')
+
+                    const applyButton = document.getElementById('apply-btn')
+                    applyButton.classList.add('bg-[rgb(29,209,0)]');
+                    applyButton.classList.add('text-white');
+
+                    document.getElementById('copupon-code').addEventListener('keyup', function(event){
+                        const eventTarget = event.target.value
+                        
+                        if(eventTarget === 'NEW15' || eventTarget === 'Couple 20'){
+                            applyButton.removeAttribute('disabled');
+                            document.getElementById('apply-btn').addEventListener('click', function(){
+                                if(eventTarget === 'NEW15'){
+                                    const grandTotal = document.getElementById('grand-total');
+                                    const grandTotalNum = parseInt(grandTotal.innerText);
+                                    const grandPrice = grandTotalNum * 15/100;
+                                    const totalGrandPrice = grandTotalNum - grandPrice;
+                                    grandTotal.innerText = totalGrandPrice;
+
+                                    const discoundPriceAdd = document.getElementById('discound-price-add');
+                                    discoundPriceAdd.innerText = `You got discount price :  ${grandPrice} Taka`;
+                                    discound.classList.add('hidden')
+                                }
+                                else if(eventTarget === 'Couple 20'){
+                                    const grandTotal = document.getElementById('grand-total');
+                                    const grandTotalNum = parseInt(grandTotal.innerText);
+                                    const grandPrice = grandTotalNum * 20/100;
+                                    const totalGrandPrice = grandTotalNum - grandPrice;
+                                    grandTotal.innerText = totalGrandPrice;
+
+                                    const discoundPriceAdd = document.getElementById('discound-price-add');
+                                    discoundPriceAdd.innerText = `You got discount price :  ${grandPrice} Taka`;
+                                    discound.classList.add('hidden')
+                                }
+                            })
+                        }
+                        else{
+                            alert('There is not our coupon code !! Please use the coupon code given above !!')
+                            applyButton.setAttribute('disabled', true);
+                        }
+                    })
+                }
+            })
+        }
+    }
+}
+
+
+function numberFunction(){
+    const phoneNumber = document.getElementById('phone-number');
+    const numberValue = phoneNumber.value;
+
+    if(numberValue.length >= 1){
+        const next = document.getElementById('next');
+        next.removeAttribute('disabled');
+    }
+    else{
+        const nexts = document.getElementById('next');
+        nexts.setAttribute('disabled', true);
+    }
+}
+
+
+function succesfull(){
+    const succesfullSection = document.getElementById('succesfull-section');
+    succesfullSection.classList.remove('hidden');
     
-// })
+    const main = document.getElementById('main');
+    main.classList.add('hidden')
 
-// }
-function gototicket(){
-    window.scrollBy(0, 2000);
-    //console.log("0,500")
-}
-function changsetcolor(){
-    document.getElementById('A1').style.backgroundColor="green";
-    const getseatnumber=document.getElementById('A1').innerHTML;
-   const satseatnumber=document.getElementById('select-seat-number').innerHTML=getseatnumber;
+    const header = document.getElementById('header');
+    header.classList.add('hidden');
 
-   const get_total_seat = document.getElementById('set_left').innerHTML;
-   
-   document.getElementById('set_left').innerHTML = get_total_seat-1;
-}
-
-function SelectSetD1(){
-    document.getElementById('d1').style.backgroundColor="green";
-    const getseatnumber=document.getElementById('d1').innerHTML;
-   const satseatnumber=document.getElementById('select-seat-number2').innerHTML=getseatnumber;
-
-   const get_total_seat = document.getElementById('set_left').innerHTML;
-   
-   document.getElementById('set_left').innerHTML = get_total_seat-1;
-   
-}
-
-function SelectSetB3(){
-    document.getElementById('b3').style.backgroundColor="green";
-    const getseatnumber=document.getElementById('b3').innerHTML;
-   const satseatnumber=document.getElementById('select-seat-number3').innerHTML=getseatnumber;
-
-   const get_total_seat = document.getElementById('set_left').innerHTML;
-   
-   document.getElementById('set_left').innerHTML = get_total_seat-1;
-
-    const price1= document.getElementById("price1").innerHTML;
-    const price2= document.getElementById("price2").innerHTML;
-    const price3= document.getElementById("price3").innerHTML;
-    const total_price = parseInt(price1)+parseInt(price2)+parseInt(price3);
-
-    document.getElementById("total_price").innerHTML="BDT"+total_price;
-
-    document.getElementById("grand_total").innerHTML="BDT"+total_price;
-   
-}
-
-
-function submit_to_sucess(){
-    document.getElementById('success-bar').style.display="block";
+    const footer = document.getElementById('footer');
+    footer.classList.add('hidden');
 }
